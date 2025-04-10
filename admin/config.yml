@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "news"
+    label: "Novinky"
+    folder: "content/news"
+    create: true
+    fields:
+      - { name: "title", label: "Nadpis", widget: "string" }
+      - { name: "date", label: "Datum", widget: "datetime" }
+      - { name: "body", label: "Tělo", widget: "markdown" }
+
+  - name: "podcasts"
+    label: "Podcasty"
+    folder: "content/podcasts"
+    create: true
+    fields:
+      - { name: "title", label: "Název podcastu", widget: "string" }
+      - { name: "youtube_url", label: "YouTube URL", widget: "string" }
+      - { name: "date", label: "Datum", widget: "datetime" }
