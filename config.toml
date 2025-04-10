@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+  command = "hugo"
+
+[params]
+  description = "Rádio Shipeast - Moderní web rádio"
+  keywords = "rádio, Shipeast, online, podcasty, novinky"
