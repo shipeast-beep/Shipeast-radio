@@ -1,7 +1,45 @@
-[build]
-  publish = "public"
-  command = "hugo"
+baseURL = "https://shipeast-beep.netlify.app/"  # Nastav URL pro veřejný web
+languageCode = "cs"  # Jazyk webu
+title = "Rádio Shipeast-beep"  # Název rádia
+theme = "ananke"  # Téma, které používáš (můžeš změnit podle potřeby)
 
+# Parametry pro SEO a přizpůsobení
 [params]
-  description = "Rádio Shipeast - Moderní web rádio"
-  keywords = "rádio, Shipeast, online, podcasty, novinky"
+  description = "Rádio Shipeast - Moderní web rádio plné hudby a podcastů"  # Popis pro SEO
+  keywords = "rádio, Shipeast, online, podcasty, novinky, hudba, živé vysílání"  # Klíčová slova pro SEO
+  author = "Shipeast-beep"  # Autor webu
+  copyright = "© 2025 Shipeast-beep"  # Autorská práva
+  logo = "/assets/images/logo.png"  # Cesta k logu (zadej skutečnou cestu)
+  twitter = "@ShipeastBeep"  # Twitter účet
+  facebook = "ShipeastBeepRadio"  # Facebook stránka
+
+# Nastavení pro strukturu URL
+[permalinks]
+  post = "/:year/:month/:day/:title/"  # Struktura URL pro příspěvky
+
+# Výběr šablony (pokud používáš nějaké konkrétní téma, můžeš změnit hodnotu)
+[params.theme]
+  main_color = "#4CAF50"  # Změna barvy pro hlavní prvek (zelená barva jako příklad)
+  accent_color = "#FF9800"  # Barva pro akcenty (oranžová)
+
+# Možnost nastavení headeru a patičky
+[params.header]
+  title = "Vítejte na rádiu Shipeast-beep"
+  subtitle = "Vaše oblíbené online rádio a podcasty"
+
+[params.footer]
+  text = "© 2025 Shipeast-beep. Všechna práva vyhrazena."
+
+# Nastavení pro RSS feed (pokud plánuješ přidávat podcasty)
+[rss]
+  title = "Shipeast-beep Rádio - Podcasty a novinky"
+  description = "Sledujte novinky a podcasty rádia Shipeast-beep."
+
+# Možnosti pro pluginy a integrace
+[params.integrations]
+  googleAnalytics = "UA-XXXXXXX-X"  # Pokud máš Google Analytics, zadej zde ID
+
+# Další nastavení pro výstupy
+[outputs]
+  home = ["HTML", "RSS"]  # Povolení generování HTML a RSS pro domovskou stránku
+  section = ["HTML", "RSS"]  # Povolení generování HTML a RSS pro sekce
